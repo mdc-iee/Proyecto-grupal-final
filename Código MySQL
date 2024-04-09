@@ -85,6 +85,22 @@ foreign key (`matricula`) references `Transporte` (`matricula`),
 foreign key (`IDdepartamento`) references `Departamento` (`IDdepartamento`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `Agente_comercial`
+VALUES ("rsdgg3456d", "11111111A", "Bartolo", "Julián", 652110120, "bartolojulian@hotmail.com", "6542 GSD", 1111),
+("ifrhu34das", "22222222B", "Romeo", "Hernández", 699351204, "romeohernandez@hotmail.com", "6421 BHJ", 1111),
+("njsefnj4r8", "33333333C", "Lidia", "Gómez", 664202105, "lidiagomez@hotmail.com", "7145 IUO", 2222),
+("inynj67njn", "44444444D", "Cecilia", "López", 630241049, "cecilialopez@hotmail.com", "5657 NJD", 2222),
+("fnjf443nd1", "55555555E", "Diego", "Manzón", 634210578, "diegomanzon@hotmail.com", "2152 NLD", 3333),
+("dfhiw24jkd", "66666666F", "Mónica", "Marcén", 653415862, "monicamarcen@hotmail.com", "4851 FYN", 4444),
+("shbef4eam2", "77777777G", "Elisa", "Velázquez", 666358798, "elisavelazquez@hotmail.com", "8561 GVJ", 5555),
+("dfo4ws23sd", "88888888H", "Mario", "Casas", 664531028, "mariocasas@hotmail.com", "3450 KJL", 5555),
+("5tuhiewj43", "99999999I", "Ethan", "Gómez", 600125863, "ethangomez@hotmail.com", "7821 OGL", 6666),
+("djn80441dn", "10101010J", "Emilio", "Beltrán", 630002548, "emiliobeltran@hotmail.com", "4602 BVG", 6666),
+("34j54jh322", "12121212K", "Sandra", "Milán", 696358410, "sandramilan@hotmail.com", "5821 MVJ", 6666),
+("fkjafjah34", "13131313L", "Marta", "Almirán", 678240031, "martaalmiran@hotmail.com", "8432 PKD", 7777),
+("sfiuh32832", "14141414M", "Denis", "Davis", 686524340, "denisdavis@hotmail.com", "6542 FDS", 7777);
+
 -- TABLA CLIENTE 
 
 DROP TABLE IF EXISTS `Cliente`;
