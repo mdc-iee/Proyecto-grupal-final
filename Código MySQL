@@ -34,6 +34,16 @@ create table `Departamento` (
 `nombre` varchar(10) default null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `Departamento`
+VALUES (1111, "Financiero"), 
+(2222, "Recursos Humanos"), 
+(3333, "Marketing"), 
+(4444, "Comercial"), 
+(5555, "Compras"), 
+(6666, "Logística y Control de Gestión"), 
+(7777, "Atención al cliente");
+
 -- TABLA TRANSPORTE
 
 DROP TABLE IF EXISTS `Transporte`;
@@ -42,6 +52,22 @@ create table `Transporte` (
 `marca` varchar(20) default null,
 `nombre` varchar(20) default null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `Transporte`
+VALUES ("6542 GSD", "Citroën", "Coche"),
+("6421 BHJ", "Renault", "Coche"),
+("7145 IUO", "Citroën", "Coche"),
+("5657 NJD", "Renault", "Coche"),
+("2152 NLD", "Audi", "Coche"),
+("4851 FYN", "Volvo", "Autobús"),
+("8561 GVJ", "Volvo", "Coche"),
+("3450 KJL", "Hyundai", "Coche"),
+("7821 OGL", "Citroën", "Coche"),
+("4602 BVG", "Fiat", "Coche"),
+("5821 MVJ", "Ford", "Coche"),
+("8432 PKD", "Volvo", "Autobús"),
+("6542 FDS", "Fiat", "Coche");
 
 -- TABLA AGENTE COMERCIAL
 
