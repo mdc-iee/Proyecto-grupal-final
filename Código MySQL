@@ -1,0 +1,122 @@
+CÓDIGO DE MYSQL PARA LA BASE DE DATOS
+drop database if exists `ECOMMERCE_RESTAURANTE`;
+CREATE DATABASE `ECOMMERCE_RESTAURANTE`;
+
+-- Usaremos la base de datos ECOMMERCE_RESTAURANTE para la creación de las tablas
+USE `ECOMMERCE_RESTAURANTE`; /*Para que se ejecute todo el código usando esta base de datos*/
+
+-- TABLA RESTAURANTE
+
+DROP TABLE IF EXISTS `Restaurante`;
+create table `Restaurante` (
+`IDrestaurante` smallint(5) not null primary key,
+`direccion` varchar(40) default null,
+`localidad` varchar(30) default null,
+`ciudad` varchar(20) default null,
+`valoracion` varchar(50) default null
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `Restaurante`
+VALUES (9000, "Calle Leopoldo Romeo, 18", "Zaragoza", "Zaragoza", "5 estrellas. Platos muy exquisitos y para repetir"),
+(9001, "Plaza San Francisco", "Zaragoza", "Zaragoza", "4 estrellas. La comida estaba buenísima y con un ambiente acogedor"),
+(9002, "Calle Compromiso de Caspe, 42", "Zaragoza", "Zaragoza", "4 estrellas y media. Dependientes bastante amables y no tardaban mucho en traer la comida"),
+(9003, "Calle de Cádiz", "Zaragoza", "Zaragoza", "3 estrellas. No estaba mal pero tardaban mucho en servir la comida, además de que los baños no eran muy acogedores en cuanto a la limpieza"),
+(9004, "Calle de Asín y Palacios, 18", "Zaragoza", "Zaragoza", "5 estrellas. La comida estaba excelente y había un camarero... Uf..."),
+(9005, "Calle del coso, 95", "Zaragoza", "Zaragoza", "3 estrellas y media. Los dependientes eran agradables pero el restaurante no tenía un ambiente muy grato"),
+(9006, "Calle Los Ángeles, 4", "Zaragoza", "Zaragoza", "4 estrellas. De los pocos restaurantes que he visto que tengan los baños tan limpios. Comida excelente.");
+
+-- TABLA DE DEPARTAMENTO 
+
+DROP TABLE IF EXISTS `Departamento`;
+create table `Departamento` (
+`IDdepartamento` smallint(5) not null primary key,
+`nombre` varchar(10) default null
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA TRANSPORTE
+
+DROP TABLE IF EXISTS `Transporte`;
+create table `Transporte` (
+`matricula` varchar(10) not null primary key,
+`marca` varchar(20) default null,
+`nombre` varchar(20) default null
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA AGENTE COMERCIAL
+
+DROP TABLE IF EXISTS `Agente_comercial`;
+create table `Agente_comercial` (
+`IDagentecomercial` varchar(15) not null primary key,
+`DNIagente` varchar(9) default null,
+`nombre` varchar(15) default null,
+`apellido` varchar(40) default null, 
+`telefono` int(9) default null,
+`correo_Electronico` varchar(50) default null,
+`matricula` varchar(10) not null,
+`IDdepartamento` smallint(5) not null,
+foreign key (`matricula`) references `Transporte` (`matricula`),
+foreign key (`IDdepartamento`) references `Departamento` (`IDdepartamento`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA CLIENTE 
+
+DROP TABLE IF EXISTS `Cliente`;
+create table `Cliente` (
+`DNIcliente` varchar(9) not null primary key,
+`nombre` varchar(15) default null,
+`apellido` varchar(40) default null,
+`telefono` int(9) default null,
+`correo_Electronico` varchar(50) default null,
+`IDrestaurante` smallint(5) not null,
+`IDagentecomercial` varchar(15) not null,
+foreign key (`IDrestaurante`) references `Restaurante` (`IDrestaurante`),
+foreign key (`IDagentecomercial`) references `Agente_comercial` (`IDagentecomercial`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA ENCARGARSE
+
+DROP TABLES IF EXISTS `ENCARGARSE`;
+create table `ENCARGARSE` (
+`DNIcliente` varchar(9) not null,
+`IDagentecomercial` varchar(15) not null,
+primary key (`DNIcliente`, `IDagentecomercial`),
+foreign key (`DNIcliente`) references `Cliente` (`DNIcliente`),
+foreign key (`IDagentecomercial`) references `Agente_comercial` (`IDagentecomercial`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA PRODUCTO 
+
+DROP TABLE IF EXISTS `Producto`;
+create table `Producto` (
+`IDproducto` int(20) not null primary key,
+`nombre` varchar(25) default null,
+`material` varchar(20) default null,
+`cantidad` smallint(5) default null,
+`precio` smallint(5) default null
+/*faltan claves foraneas */
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA SUMINISTRAR
+
+DROP TABLE IF EXISTS `SUMINISTRAR`;
+create table `SUMINISTRAR` (
+`IDagentecomercial` varchar(15) not null,
+`IDproducto` int(20) not null,
+`cantidad` tinyint(3) default null,
+primary key (`IDagentecomercial`, `IDproducto`),
+foreign key (`IDagentecomercial`) references `Agente_comercial` (`IDagentecomercial`),
+foreign key (`IDproducto`) references `Producto` (`IDproducto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TABLA COMPRAR
+
+DROP TABLE IF EXISTS `COMPRAR`;
+create table `COMPRAR` (
+`DNIcliente` varchar(9) not null,
+`IDproducto` int(20) not null,
+`cantidad` tinyint(3) default null,
+primary key (`DNIcliente`, `IDproducto`),
+foreign key (`DNIcliente`) references `Cliente` (`DNIcliente`),
+foreign key (`IDproducto`) references `Producto` (`IDproducto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
