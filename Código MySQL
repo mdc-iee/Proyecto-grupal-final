@@ -196,6 +196,40 @@ foreign key (`IDagentecomercial`) references `Agente_comercial` (`IDagentecomerc
 foreign key (`IDproducto`) references `Producto` (`IDproducto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `SUMINISTRAR`
+VALUES ("rsdgg3456d", 10000001, 4), 
+("ifrhu34das", 10000002, 50), 
+("rsdgg3456d", 10000003, 60), 
+("rsdgg3456d", 10000004, 10), 
+("ifrhu34das", 10000005, 70), 
+("rsdgg3456d", 10000006, 80), 
+("rsdgg3456d", 10000007, 60), 
+("rsdgg3456d", 10000008, 50),
+("ifrhu34das", 10000009, 40),
+("rsdgg3456d", 10000010, 11),
+("rsdgg3456d", 10000011, 11),
+("inynj67njn", 10000012, 60),
+("rsdgg3456d", 10000013, 50),
+("fnjf443nd1", 10000014, 20),
+("njsefnj4r8", 10000015, 80),
+("rsdgg3456d", 10000016, 60),
+("fnjf443nd1", 10000017, 90),
+("inynj67njn", 10000018, 40),
+("njsefnj4r8", 10000019, 80),
+("fnjf443nd1", 10000020, 10),
+("fnjf443nd1", 10000021, 20),
+("rsdgg3456d", 10000022, 60),
+("fnjf443nd1", 10000023, 80),
+("inynj67njn", 10000024, 70),
+("inynj67njn", 10000025, 30),
+("njsefnj4r8", 10000026, 10),
+("njsefnj4r8", 10000027, 50),
+("rsdgg3456d", 10000028, 80),
+("rsdgg3456d", 10000029, 60),
+("inynj67njn", 10000030, 40),
+("rsdgg3456d", 10000031, 25);
+
 -- TABLA COMPRAR
 
 DROP TABLE IF EXISTS `COMPRAR`;
