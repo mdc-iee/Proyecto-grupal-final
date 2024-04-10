@@ -243,7 +243,7 @@ foreign key (`IDproducto`) references `Producto` (`IDproducto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Después de haber creado la tabla, insertaremos los datos necesarios*/
-INSERT INTO `SUMINISTRAR`
+INSERT INTO `COMPRAR`
 VALUES ("15151515N", 10000001, 4), 
 ("17171717P", 10000002, 5), 
 ("16161616O", 10000003, 4), 
