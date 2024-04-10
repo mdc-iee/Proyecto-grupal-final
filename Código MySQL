@@ -198,7 +198,7 @@ foreign key (`IDproducto`) references `Producto` (`IDproducto`)
 
 /*Después de haber creado la tabla, insertaremos los datos necesarios*/
 INSERT INTO `SUMINISTRAR`
-VALUES ("rsdgg3456d", 10000001, 4), 
+VALUES ("rsdgg3456d", 10000001, 40), 
 ("ifrhu34das", 10000002, 50), 
 ("rsdgg3456d", 10000003, 60), 
 ("rsdgg3456d", 10000004, 10), 
@@ -241,3 +241,37 @@ primary key (`DNIcliente`, `IDproducto`),
 foreign key (`DNIcliente`) references `Cliente` (`DNIcliente`),
 foreign key (`IDproducto`) references `Producto` (`IDproducto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `SUMINISTRAR`
+VALUES ("15151515N", 10000001, 4), 
+("17171717P", 10000002, 5), 
+("16161616O", 10000003, 4), 
+("15151515N", 10000004, 5), 
+("17171717P", 10000005, 7), 
+("15151515N", 10000006, 6), 
+("16161616O", 10000007, 10), 
+("15151515N", 10000008, 12),
+("17171717P", 10000009, 7),
+("16161616O", 10000010, 5),
+("16161616O", 10000011, 13),
+("20202020S", 10000012, 10),
+("16161616O", 10000013, 14),
+("21212121T", 10000014, 20),
+("18181818Q", 10000015, 9),
+("16161616O", 10000016, 4),
+("21212121T", 10000017, 3),
+("20202020S", 10000018, 10),
+("19191919R", 10000019, 8),
+("21212121T", 10000020, 6),
+("21212121T", 10000021, 3),
+("16161616O", 10000022, 7),
+("21212121T", 10000023, 8),
+("20202020S", 10000024, 10),
+("20202020S", 10000025, 4),
+("18181818Q", 10000026, 10),
+("19191919R", 10000027, 5),
+("16161616O", 10000028, 9),
+("15151515N", 10000029, 6),
+("20202020S", 10000030, 10),
+("15151515N", 10000031, 11);
