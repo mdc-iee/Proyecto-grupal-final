@@ -38,7 +38,7 @@ create table `Departamento` (
 INSERT INTO `Departamento`
 VALUES (1111, "Comercial"), 
 (2222, "Compras"),
-(3333, "Atención al cliente");
+(3333, "Soporte");
 
 -- TABLA TRANSPORTE
 
@@ -124,6 +124,16 @@ primary key (`DNIcliente`, `IDagentecomercial`),
 foreign key (`DNIcliente`) references `Cliente` (`DNIcliente`),
 foreign key (`IDagentecomercial`) references `Agente_comercial` (`IDagentecomercial`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Después de haber creado la tabla, insertaremos los datos necesarios*/
+INSERT INTO `ENCARGARSE`
+VALUES ("15151515N", "rsdgg3456d"), 
+("16161616O", "rsdgg3456d"),
+("17171717P", "ifrhu34das"),
+("18181818Q", "njsefnj4r8"),
+("19191919R", "njsefnj4r8"),
+("20202020S", "inynj67njn"),
+("21212121T", "fnjf443nd1");
 
 -- TABLA PRODUCTO 
 
