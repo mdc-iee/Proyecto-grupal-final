@@ -275,3 +275,16 @@ VALUES ("15151515N", 10000001, 4),
 ("15151515N", 10000029, 6),
 ("20202020S", 10000030, 10),
 ("15151515N", 10000031, 11);
+
+-- Creamos los dos usuarios que tendremos en la base de datos y les otorgamos los privilegios indicados respectivamente
+DROP USER IF EXISTS 'Administrador';
+CREATE USER 'Administrador' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON `ecommerce_restaurante` TO 'Administrador';
+
+DROP USER IF EXISTS 'Cliente';
+CREATE USER 'Cliente' IDENTIFIED BY 'cliente';
+GRANT SELECT ON `producto` TO 'Cliente';
+
+DROP USER IF EXISTS 'Proveedor';
+CREATE USER 'Proveedor' IDENTIFIED BY 'proveedor';
+GRANT INSERT, UPDATE, DELETE ON `producto` TO 'Proveedor';
