@@ -24,31 +24,21 @@ public class ProductosDAO {
             e.printStackTrace();
         }
     }
-
-    Connection conn = null;
-    Statement stm = null;
-    
-    String bd = "jdbc:mysql://localhost:3306/ecommerce_restaurante";
-    String user = "root";
-    String psw = "ikerpan2020";
-    
-    
-    public List<Producto> listarProductos() throws ClassNotFoundException {
+       
+    public List<Producto> listarProductos() {
         List<Producto> productos = new ArrayList<>();
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); //Se agrega junto al ClassNotFoundException para que funcione correctamente la conexión
-            
-            conn = DriverManager.getConnection(bd, user, psw);
-            stm = conn.createStatement();
-            
-            int fila = -1;
-            
-            ResultSet rs = stm.executeQuery("SELECT * FROM producto");
+            Connection conn = dataSource.getConnection();
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM Producto");
+            ResultSet rs = ps.executeQuery();
             while(rs.next()) {
                 Producto producto = new Producto(rs.getInt("IDproducto"), rs.getString("nombre"), rs.getString("material"), rs.getInt("cantidad"), rs.getString("precio"));
                 productos.add(producto);
             }
-        } catch (SQLException | ClassNotFoundException e) {
+            rs.close();
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return productos;
