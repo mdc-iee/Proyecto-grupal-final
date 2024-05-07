@@ -28,7 +28,7 @@ ul{
 	padding: 0;
 }
 a, a:hover, a.active, a:active, a:visited, a:focus{
-	color:#fefefe;
+	color: cyan;
 	text-decoration:none;
 }
 .content{
@@ -36,11 +36,11 @@ a, a:hover, a.active, a:active, a:visited, a:focus{
 }
 
 .exo-menu{
-	width: 70%;
+	width: 100%;
 	float: left;
 	list-style: none;
 	position:relative;
-    left: 7vw;
+   
 	background: darkred;
 }
 
@@ -361,14 +361,60 @@ a.toggle-menu{
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
 
 
+
 .containeer{
-  margin-top: 50px;
+ position: relative;
+ top: 100px;
 }
 
-h1, .card-title, a, #toast{
+ .card-title, a, #toast{
   font-family: 'Roboto', sans-serif;
 }
 
+.col-lg-4{
+position: static;
+left: 20vw;
+
+}
+
+.col-lg-3{
+position: relative;
+left: 30vw;
+bottom: 34vw;
+
+}
+
+.col-lg-2{
+
+position: relative;
+left: 60vw;
+bottom: 67vw;
+
+}
+
+.col-lg-1{
+
+  position: relative;
+  left: 1vw;
+  bottom: 60vw;
+  
+  }
+
+  .col-lg-0{
+
+    position: relative;
+    left: 30vw;
+    bottom: 93vw;
+    
+    }
+
+    .col-lg-5{
+
+      position: relative;
+      left: 60vw;
+      bottom: 126vw;
+      
+      }
 
 
 .card{
@@ -378,7 +424,7 @@ h1, .card-title, a, #toast{
 }
 
 .card-body{
-  padding: 100px;
+  padding: 10px;
   margin-top: -50px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
