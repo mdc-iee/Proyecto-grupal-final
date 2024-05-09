@@ -13,7 +13,7 @@ create table `Restaurante` (
 `direccion` varchar(40) default null,
 `localidad` varchar(30) default null,
 `ciudad` varchar(20) default null,
-`valoracion` varchar(50) default null
+`valoracion` varchar(500) default null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Después de haber creado la tabla, insertaremos los datos necesarios*/
@@ -85,9 +85,17 @@ foreign key (`IDdepartamento`) references `Departamento` (`IDdepartamento`)
 INSERT INTO `Agente_comercial`
 VALUES ("rsdgg3456d", "11111111A", "Bartolo", "Julián", 652110120, "bartolojulian@hotmail.com", "6542 GSD", 1111),
 ("ifrhu34das", "22222222B", "Romeo", "Hernández", 699351204, "romeohernandez@hotmail.com", "6421 BHJ", 1111),
-("njsefnj4r8", "33333333C", "Lidia", "Gómez", 664202105, "lidiagomez@hotmail.com", "7145 IUO", 2222),
-("inynj67njn", "44444444D", "Cecilia", "López", 630241049, "cecilialopez@hotmail.com", "5657 NJD", 2222),
-("fnjf443nd1", "55555555E", "Diego", "Manzón", 634210578, "diegomanzon@hotmail.com", "2152 NLD", 3333),
+("njsefnj4r8", "33333333C", "Lidia", "Gómez", 664202105, "lidiagomez@hotmail.com", "7145 IUO", 1111),
+("inynj67njn", "44444444D", "Cecilia", "López", 630241049, "cecilialopez@hotmail.com", "5657 NJD", 1111),
+("fnjf443nd1", "55555555E", "Diego", "Manzón", 634210578, "diegomanzon@hotmail.com", "2152 NLD", 1111),
+("dfhiw24jkd", "66666666F", "Mónica", "Marcén", 653415862, "monicamarcen@hotmail.com", "4851 FYN", 2222),
+("shbef4eam2", "77777777G", "Elisa", "Velázquez", 666358798, "elisavelazquez@hotmail.com", "8561 GVJ", 2222),
+("dfo4ws23sd", "88888888H", "Mario", "Casas", 664531028, "mariocasas@hotmail.com", "3450 KJL", 2222),
+("5tuhiewj43", "99999999I", "Ethan", "Gómez", 600125863, "ethangomez@hotmail.com", "7821 OGL", 2222),
+("djn80441dn", "10101010J", "Emilio", "Beltrán", 630002548, "emiliobeltran@hotmail.com", "4602 BVG", 3333),
+("34j54jh322", "12121212K", "Sandra", "Milán", 696358410, "sandramilan@hotmail.com", "5821 MVJ", 3333),
+("fkjafjah34", "13131313L", "Marta", "Almirán", 678240031, "martaalmiran@hotmail.com", "8432 PKD", 3333),
+("sfiuh32832", "14141414M", "Denis", "Davis", 686524340, "denisdavis@hotmail.com", "6542 FDS", 3333);
 
 -- TABLA CLIENTE 
 
@@ -142,8 +150,8 @@ create table `Producto` (
 `IDproducto` int(20) not null primary key,
 `nombre` varchar(25) default null,
 `material` varchar(20) default null,
-`cantidad` smallint(5) default null,
-`precio` smallint(5) default null,
+`cantidad`  smallint(5) default null,
+`precio` varchar(20) default null,
 `fechallegada` date default null,
 `DNIcliente` varchar(9) not null,
 `IDagentecomercial` varchar(15) not null,
@@ -157,16 +165,16 @@ VALUES (10000001, "Plato pequeño", "Porcelana", 500, "30€ por pack de 20", "2
 (10000002, "Plato grande", "Porcelana", 500, "50€ por pack de 20", "2024-04-15", "17171717P", "ifrhu34das"),
 (10000003, "Vaso pequeño", "Vidrio", 350, "15€ por caja de 30", "2024-04-16", "16161616O", "rsdgg3456d"),
 (10000004, "Vaso grande", "Vidrio", 500, "20€ por pack de 25", "2024-04-14", "15151515N", "rsdgg3456d"),
-(10000005, "Taza", "Porcelana", 250, "18€ por pack de 20", "2024-04-17", "17171717P", "ifrhu34das"),
-(10000006, "Cubertería", "Acero inoxidable", 200, "30€ cada pack", "2024-04-16", "16161616O", "rsdgg3456d"),
+(10000005, "Taza", "Porcelana", 250, "18€ por pack de 20", "2024-04-07", "17171717P", "ifrhu34das"),
+(10000006, "Cubertería", "Acero inoxidable", 200, "30€ cada pack", "2024-04-25", "16161616O", "rsdgg3456d"),
 (10000007, "Jarra", "Vidrio", 225, "15€ cada jarra", "2024-04-14", "16161616O", "rsdgg3456d"),
 (10000008, "Mantel", "Papel", 300, "12€ cada mantel", "2024-04-17", "15151515N", "rsdgg3456d"),
-(10000009, "Servilleta pequeña", "Papel", 600, "20€ por pack de 80", "2024-04-14", "17171717P", "ifrhu34das"),
+(10000009, "Servilleta pequeña", "Papel", 600, "20€ por pack de 80", "2024-04-04", "17171717P", "ifrhu34das"),
 (10000010, "Servilleta grande", "Papel", 600, "25€ por pack de 60", "2024-04-10", "16161616O", "rsdgg3456d"),
 (10000011, "Copa pequeña", "Vidrio", 450, "35€ por pack de 20", "2024-04-12", "15151515N", "rsdgg3456d"),
-(10000012, "Copa grande", "Vidrio", 450, "40€ por pack de 16", "2024-04-18", "20202020S", "inynj67njn"),
+(10000012, "Copa grande", "Vidrio", 450, "40€ por pack de 16", "2024-04-26", "20202020S", "inynj67njn"),
 (10000013, "Bote de jabón", "Plástico", 200, "13€ cada bote", "2024-04-13", "15151515N", "rsdgg3456d"),
-(10000014, "Velas aromáticas", "Cera", 150, "10€ por pack de 4", "2024-04-14", "21212121T", "fnjf443nd1"),
+(10000014, "Velas aromáticas", "Cera", 150, "10€ por pack de 4", "2024-04-29", "21212121T", "fnjf443nd1"),
 (10000015, "Trapo", "Algodón", 200, "8€ por pack de 3", "2024-04-19", "18181818Q", "njsefnj4r8"),
 (10000016, "Esponja", "Fibra celulósica", 250, "8€ por pack de 2", "2024-04-20", "15151515N", "rsdgg3456d"),
 (10000017, "Papelera", "Plástico", 100, "20€ cada una", "2024-04-10", "21212121T", "fnjf443nd1"),
@@ -176,14 +184,14 @@ VALUES (10000001, "Plato pequeño", "Porcelana", 500, "30€ por pack de 20", "2
 (10000021, "Sartén pequeña", "Acero inoxidable", 250, "15€ cada una", "2024-04-17", "21212121T", "fnjf443nd1"),
 (10000022, "Sartén grande", "Acero inoxidable", 200, "18€ cada una", "2024-04-14", "15151515N", "rsdgg3456d"),
 (10000023, "Olla pequeña", "Acero inoxidable", 250, "12€ cada una", "2024-04-13", "21212121T", "fnjf443nd1"),
-(10000024, "Olla grande", "Acero inoxidable", 200, "15€ cada una", "2024-04-18", "20202020S", "inynj67njn"),
+(10000024, "Olla grande", "Acero inoxidable", 200, "15€ cada una", "2024-04-29", "20202020S", "inynj67njn"),
 (10000025, "Cazo", "Acero inoxidable", 150, "10€ cada uno", "2024-04-20", "20202020S", "inynj67njn"),
 (10000026, "Cacerola", "Acero inoxidable", 170, "16€ cada una", "2024-04-02", "18181818Q", "njsefnj4r8"),
 (10000027, "Juego de cuchillos", "Acero inoxidable", 100, "20€ cada pack", "2024-04-03", "18181818Q", "njsefnj4r8"),
 (10000028, "Espátula", "Acero inoxidable", 80, "8€ cada una", "2024-04-05", "16161616O", "rsdgg3456d"),
 (10000029, "Cucharón", "Acero inoxidable", 80, "11€ cada uno", "2024-04-08", "15151515N", "rsdgg3456d"),
 (10000030, "Batidor", "Acero inoxidable", 70, "9€ cada uno", "2024-04-22", "20202020S", "inynj67njn"),
-(10000031, "Bandeja", "Plástico", 100, "13€ cada una", "2024-04-20", "16161616O", "rsdgg3456d");
+(10000031, "Bandeja", "Plástico", 100, "13€ cada una", "2024-04-30", "16161616O", "rsdgg3456d");
 
 -- TABLA SUMINISTRAR
 
@@ -191,7 +199,7 @@ DROP TABLE IF EXISTS `SUMINISTRAR`;
 create table `SUMINISTRAR` (
 `IDagentecomercial` varchar(15) not null,
 `IDproducto` int(20) not null,
-`cantidad` tinyint(3) default null,
+`cantidad` smallint(5) default null,
 primary key (`IDagentecomercial`, `IDproducto`),
 foreign key (`IDagentecomercial`) references `Agente_comercial` (`IDagentecomercial`),
 foreign key (`IDproducto`) references `Producto` (`IDproducto`)
@@ -237,7 +245,7 @@ DROP TABLE IF EXISTS `COMPRAR`;
 create table `COMPRAR` (
 `DNIcliente` varchar(9) not null,
 `IDproducto` int(20) not null,
-`cantidad` tinyint(3) default null,
+`cantidad` smallint(5) default null,
 primary key (`DNIcliente`, `IDproducto`),
 foreign key (`DNIcliente`) references `Cliente` (`DNIcliente`),
 foreign key (`IDproducto`) references `Producto` (`IDproducto`)
