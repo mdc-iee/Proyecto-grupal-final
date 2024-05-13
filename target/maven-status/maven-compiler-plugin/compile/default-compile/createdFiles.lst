@@ -1,0 +1,5 @@
+com\mycompany\ecommerce_restaurante\Producto.class
+com\mycompany\ecommerce_restaurante\resources\JakartaEE10Resource.class
+servlets\SvProductos.class
+com\mycompany\ecommerce_restaurante\JakartaRestConfiguration.class
+com\mycompany\ecommerce_restaurante\ProductosDAO.class
