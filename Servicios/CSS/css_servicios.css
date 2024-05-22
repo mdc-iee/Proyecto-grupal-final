@@ -363,7 +363,7 @@ a.toggle-menu{
     width: 100%;
     background-color: #0a141d;
     position: absolute;
-    top: 200%;
+    top: 300%;
 
 }
 
@@ -456,6 +456,7 @@ a:link, a:visited, a:active {
 
 	z-index: 10;
 }
+
 /*Tamaño de las fotos de países*/
 .container .fotos {
 	display: flex;
@@ -501,7 +502,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: -65%;
-  top: 3%;
+  top: 43%;
 }
 
 .fotos:nth-child(2) {
@@ -511,7 +512,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 15%;
-  top: 3%;
+  top: 43%;
 }
 
 .fotos:nth-child(3) {
@@ -521,7 +522,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 95%;
-  top: 3%;
+  top: 43%;
 }
 
 .fotos:nth-child(4) {
@@ -531,7 +532,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: -65%;
-  top: 35%;
+  top: 75%;
 }
 
 .fotos:nth-child(5) {
@@ -541,7 +542,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 15%;
-  top: 35%;
+  top: 75%;
 }
 
 .fotos:nth-child(6) {
@@ -551,7 +552,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 95%;
-  top: 35%;
+  top: 75%;
 }
 
 .fotos:nth-child(7) {
@@ -561,7 +562,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: -65%;
-  top: 67%;
+  top: 107%;
 }
 
 .fotos:nth-child(8) {
@@ -571,7 +572,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 15%;
-  top: 67%;
+  top: 107%;
 }
 
 .fotos:nth-child(9) {
@@ -581,7 +582,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 95%;
-  top: 67%;
+  top: 107%;
 }
 
 .fotos:nth-child(10) {
@@ -591,7 +592,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: -65%;
-  top: 67%;
+  top: 139%;
 }
 
 .fotos:nth-child(11) {
@@ -601,7 +602,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 15%;
-  top: 67%;
+  top: 139%;
 }
 
 .fotos:nth-child(12) {
@@ -611,7 +612,7 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 95%;
-  top: 67%;
+  top: 139%;
 }
 
 .fotos:nth-child(13) {
@@ -621,5 +622,5 @@ a:link, a:visited, a:active {
   height: 300px;
   position: absolute;
   left: 15%;
-  top: 99%;
+  top: 171%;
 }
