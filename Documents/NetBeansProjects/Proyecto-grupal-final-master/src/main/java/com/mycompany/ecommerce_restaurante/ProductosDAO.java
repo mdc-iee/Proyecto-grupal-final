@@ -20,8 +20,9 @@ public class ProductosDAO {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
             dataSource = (DataSource) envContext.lookup("jdbc/ECOMMERCE_RESTAURANTE");
+            System.out.println("Conexión exitosa.");
         } catch (NamingException e) {
-            e.printStackTrace();
+            System.out.println("Error en la conexión: " + e.getMessage());
         }
     }
        
